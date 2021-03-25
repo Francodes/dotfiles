@@ -61,3 +61,7 @@ if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
   print_cyan "Adding .zsh-aliases to ~/.zshrc"
   `echo "source ~/.zsh-aliases" >> ~/.zshrc`
 end
+if File.readlines(path("~/.zshrc")).grep(/zsh-work/).size == 0
+  print_cyan "Adding .zsh-work to ~/.zshrc"
+  `echo "source ~/.zsh-zhs-work" >> ~/.zshrc`
+end

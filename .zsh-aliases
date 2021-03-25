@@ -20,6 +20,10 @@ alias cy="yarn cy:open"
 # Utility
 alias hg='history | grep'
 
+# Repos
+alias dotfiles="cd ~/Documents/Work/dotfiles"
+
+# Custom commands
 kill_port() {
   if [ -n "$1" ]
   then
@@ -28,3 +32,13 @@ kill_port() {
     echo "Pass in port number."
   fi
 }
+
+# Adds source control branch to prompt 
+autoload -Uz vcs_info
+autoload -U colors && colors
+precmd() { vcs_info }
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '- (%b)'
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+PROMPT='%{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[green]%}${vcs_info_msg_0_} %{$reset_color%}$ '

@@ -1,0 +1,9 @@
+# Work Repos
+alias iso="cd ~/Documents/Work/iso/app"
+
+# Load asdf
+. $(brew --prefix)/opt/asdf/asdf.sh
+
+# Load direnv
+eval "$(direnv hook zsh)"
+
