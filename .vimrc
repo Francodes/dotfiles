@@ -5,11 +5,12 @@ filetype off     " required
 call plug#begin()
 
 Plug 'janko/vim-test'               " Run Ruby and Elixir tests
-Plug 'nikolalsvk/vim-rails'         " Rails plugin
+Plug 'tpope/vim-rails'              " Rails plugin
 
 Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
 Plug 'tpope/vim-fugitive'           " :Gblame
 Plug 'tpope/vim-rhubarb'            " :GBrowse
+Plug 'tpope/vim-surround'           " Helps inside (), '', {}, etc
 
 Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'mileszs/ack.vim'              " Use ack in Vim

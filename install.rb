@@ -45,6 +45,8 @@ end
 print_cyan "Copying .vimrc to ~/.vimrc"
 `cp .vimrc ~/.vimrc`
 print_cyan "Copying .gitconfig to ~/.gitconfig"
+`cp .global_gitignore ~/.global_gitignore`
+print_cyan "Copying .global_gitignore to ~/.global_gitignore"
 `cp .gitconfig ~/.gitconfig`
 print_cyan "Copying .zsh-aliases to ~/.zsh-aliases"
 `cp .zsh-aliases ~/.zsh-aliases`
