@@ -42,14 +42,6 @@ else
   print_green "You already have zsh, awesome!"
 end
 
-print_cyan "Checking if honukai theme is installed"
-if File.exists? path("~/.oh-my-zsh/themes/honukai.zsh-theme")
-  print_green "You already have honukai theme, awesome!"
-else
-  print_red "Nope, installing honukai theme"
-  `wget -P ~/.oh-my-zsh/themes "https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme"`
-end
-
 print_cyan "Copying .vimrc to ~/.vimrc"
 `cp .vimrc ~/.vimrc`
 print_cyan "Copying .gitconfig to ~/.gitconfig"
@@ -63,5 +55,5 @@ if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
 end
 if File.readlines(path("~/.zshrc")).grep(/zsh-work/).size == 0
   print_cyan "Adding .zsh-work to ~/.zshrc"
-  `echo "source ~/.zsh-zhs-work" >> ~/.zshrc`
+  `echo "source ~/.zsh-work" >> ~/.zshrc`
 end

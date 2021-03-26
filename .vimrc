@@ -15,7 +15,7 @@ Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'mileszs/ack.vim'              " Use ack in Vim
 Plug 'scrooloose/nerdtree'          " File explorer support
 Plug 'Xuyuanp/nerdtree-git-plugin'  " Git marks on file explorer
-
+Plug 'morhetz/gruvbox'              " Provides the 'gruvbox' color scheme
 
 Plug 'pangloss/vim-javascript'      " JavaScript support
 Plug 'leafgarland/typescript-vim'   " TypeScript syntax
@@ -40,6 +40,9 @@ let mapleader = " "
 " Look and Feel settings
 syntax enable
 set background=dark
+colorscheme gruvbox
+set t_Co=256
+let g:gruvbox_contrast_dark = 'hard'
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 set ttyfast
 set lazyredraw

@@ -13,7 +13,8 @@ Get started quickly:
    ```
 
 2. (optional) Get into the repo and run the brew script
-Run this if you are getting a new Mac setup. Will install Homebrew along with multiple useful apps and binaries
+
+  Run this if you are getting a new Mac setup. Will install Homebrew along with multiple useful apps and binaries
 
    ```bash
    cd dotfiles && ./brew.sh
@@ -25,13 +26,10 @@ Run this if you are getting a new Mac setup. Will install Homebrew along with mu
    cd dotfiles && ./install.rb
    ```
 
-4. Add theme colors to iTerm (optional)
+4. Add theme colors to Terminal
 
-   I use [Honukai theme](https://github.com/oskarkrawczyk/honukai-iterm-zsh) if
-   you're interested in having the similar visual appearance.
-
-   You need to download [honukai.itermcolors](https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.itermcolors)
-   to Colors tab in iTerm to achieve the same colors.
+  Gruvbox theme is included in the installation. Please make sure to run `Gruvbox-dark.terminal` to add
+  gruvbox the terminal theme. Vim gruvbox is installed by default.
 
 That is it. If you find something broken or worth fixing, create an issue and /
 or a pull request and let's make it better.
