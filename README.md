@@ -14,9 +14,8 @@ Get started quickly:
 
 2. _(optional)_ Get into the repo and run the brew script
 
-
+   Run this if you are getting a new Mac setup. Will install Homebrew along with multiple useful apps and binaries
    ```bash
-   # Run this if you are getting a new Mac setup. Will install Homebrew along with multiple useful apps and binaries
    cd dotfiles && ./brew.sh
    ```
 
@@ -28,10 +27,8 @@ Get started quickly:
 
 4. Add theme colors to Terminal
 
-  ```
-  Gruvbox theme is included in the installation. Please make sure to run `Gruvbox-dark.terminal` to add
-  gruvbox the terminal theme. Vim gruvbox is installed by default.
-  ```
+   Gruvbox theme is included in the installation. Please make sure to run `Gruvbox-dark.terminal` to add
+   gruvbox the terminal theme. Vim gruvbox is installed by default.
 
 
 That is it. If you find something broken or worth fixing, create an issue and /
