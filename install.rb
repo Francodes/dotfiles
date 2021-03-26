@@ -48,6 +48,8 @@ print_cyan "Copying .gitconfig to ~/.gitconfig"
 `cp .gitconfig ~/.gitconfig`
 print_cyan "Copying .zsh-aliases to ~/.zsh-aliases"
 `cp .zsh-aliases ~/.zsh-aliases`
+print_cyan "Copying .zsh-work to ~/.zsh-work"
+`cp .zsh-work ~/.zsh-work`
 
 if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
   print_cyan "Adding .zsh-aliases to ~/.zshrc"

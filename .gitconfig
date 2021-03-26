@@ -3,7 +3,7 @@
   email = franco@hey.com
 
 [credential]
-  helper = GIT_CREDENTIAL_HELPER
+  helper = osxkeychain
 
 [alias]
   a    = add
@@ -20,6 +20,7 @@
   l    = log --pretty=format:'%C(yellow)%h%Creset %Cgreen(%><(12)%cr%><|(12))%Creset - %s %C(blue)<%an>%Creset'
   pl   = pull
   ps   = push
+  psu  = push -u origin $(git branch --show-current)
   psf  = push --force-with-lease
   undo = reset --soft HEAD^
   f    = fetch
@@ -60,9 +61,6 @@
 
 [push]
   default = current
-
-[commit]
-  gpgsign = true
 
 [diff]
   colorMoved = default
