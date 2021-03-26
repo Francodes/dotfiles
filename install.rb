@@ -52,6 +52,8 @@ print_cyan "Copying .zsh-aliases to ~/.zsh-aliases"
 `cp .zsh-aliases ~/.zsh-aliases`
 print_cyan "Copying .zsh-work to ~/.zsh-work"
 `cp .zsh-work ~/.zsh-work`
+print_cyan "Copying .tmux.conf to ~/.tmux.conf"
+`cp .tmux.conf ~/.tmux.conf`
 
 if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
   print_cyan "Adding .zsh-aliases to ~/.zshrc"
@@ -61,3 +63,8 @@ if File.readlines(path("~/.zshrc")).grep(/zsh-work/).size == 0
   print_cyan "Adding .zsh-work to ~/.zshrc"
   `echo "source ~/.zsh-work" >> ~/.zshrc`
 end
+if File.readlines(path("~/.tmux.conf")).grep(/COLORSCHEME: gruvbox dark/).size == 0
+  print_cyan "Adding gruvbox dark theme to ~/.tmux.conf"
+  `cat tmux-gruvbox-dark.conf >> ~/.tmux.conf`
+end
+
