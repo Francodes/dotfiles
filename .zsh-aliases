@@ -2,6 +2,7 @@
 alias be="bundle exec"
 alias bec="bundle exec rails c"
 alias ber="bundle exec rails s"
+alias bers="bundle exec rspec"
 alias s="spring"
 alias precompile="bundle exec rake assets:precompile"
 alias bem="bundle exec rake db:migrate"
@@ -33,7 +34,7 @@ kill_port() {
   fi
 }
 
-# Adds source control branch to prompt 
+# Adds source control branch to prompt
 autoload -Uz vcs_info
 autoload -U colors && colors
 precmd() { vcs_info }
