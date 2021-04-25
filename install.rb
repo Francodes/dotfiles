@@ -56,6 +56,9 @@ print_cyan "Copying .zsh-work to ~/.zsh-work"
 `cp .zsh-work ~/.zsh-work`
 print_cyan "Copying .tmux.conf to ~/.tmux.conf"
 `cp .tmux.conf ~/.tmux.conf`
+print_cyan "Copying coc-settings.json to ~/.vim"
+`cp coc-settings.json ~/.vim`
+
 
 if File.readlines(path("~/.zshrc")).grep(/zsh-aliases/).size == 0
   print_cyan "Adding .zsh-aliases to ~/.zshrc"
