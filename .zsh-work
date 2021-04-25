@@ -1,5 +1,6 @@
 # Work Repos
 alias iso="cd ~/Documents/Work/iso/app"
+alias strety="cd ~/Documents/Work/strety"
 
 # Load asdf
 . $(brew --prefix)/opt/asdf/asdf.sh
