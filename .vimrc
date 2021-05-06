@@ -4,10 +4,10 @@ filetype off     " required
 " Keep Plug commands between plug#begin() and plug#end().
 call plug#begin()
 
-Plug 'janko/vim-test'               " Run Ruby and Elixir tests
+Plug 'vim-test/vim-test'            " Run tests for multiple formats
 Plug 'tpope/vim-rails'              " Rails plugin
 
-Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
+Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'tpope/vim-sleuth'             " Auto-detect indentation format
 Plug 'tpope/vim-speeddating'        " Enhances Vim increment/decrement
 Plug 'tpope/vim-dispatch'           " Runs helper tasks async
@@ -18,7 +18,7 @@ Plug 'tpope/vim-rhubarb'            " :GBrowse
 Plug 'tpope/vim-surround'           " Helps inside (), '', {}, etc
 Plug 'tpope/vim-commentary'         " gc/gcc - Commenting functions
 
-Plug 'tpope/vim-endwise'            " Autocomplete end after a do
+Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
 Plug 'mileszs/ack.vim'              " Use ack in Vim
 Plug 'scrooloose/nerdtree'          " File explorer support
 Plug 'Xuyuanp/nerdtree-git-plugin'  " Git marks on file explorer
