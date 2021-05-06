@@ -8,9 +8,15 @@ Plug 'janko/vim-test'               " Run Ruby and Elixir tests
 Plug 'tpope/vim-rails'              " Rails plugin
 
 Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
+Plug 'tpope/vim-sleuth'             " Auto-detect indentation format
+Plug 'tpope/vim-speeddating'        " Enhances Vim increment/decrement
+Plug 'tpope/vim-dispatch'           " Runs helper tasks async
+Plug 'tpope/vim-repeat'             " Repeat (.) support for plugin tasks
+
 Plug 'tpope/vim-fugitive'           " :Gblame
 Plug 'tpope/vim-rhubarb'            " :GBrowse
 Plug 'tpope/vim-surround'           " Helps inside (), '', {}, etc
+Plug 'tpope/vim-commentary'         " gc/gcc - Commenting functions
 
 Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'mileszs/ack.vim'              " Use ack in Vim
