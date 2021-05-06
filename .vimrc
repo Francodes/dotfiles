@@ -161,6 +161,8 @@ nnoremap <C-p> :GFiles<Cr>
 " Map fzf + ag search to CTRL P
 nnoremap <C-g> :Ag <Cr>
 
+" make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest<CR>
 nnoremap <silent><leader>' :TestFile<CR>
