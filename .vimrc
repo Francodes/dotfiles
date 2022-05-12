@@ -6,6 +6,7 @@ call plug#begin()
 
 Plug 'vim-test/vim-test'            " Run tests for multiple formats
 Plug 'tpope/vim-rails'              " Rails plugin
+Plug 'adelarsq/vim-matchit'         " Match most tags using %
 
 Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'tpope/vim-sleuth'             " Auto-detect indentation format
@@ -54,6 +55,8 @@ set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical
 set ttyfast
 set lazyredraw
 set updatetime=300
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " Numbers
 set number
@@ -157,7 +160,7 @@ nnoremap <leader>rn :set relativenumber!<cr>
 " If fzf installed using git
 set rtp+=~/.fzf
 " Map fzf search to CTRL P
-nnoremap <C-p> :GFiles<Cr>
+nnoremap <C-p> :GFiles --cached --others --exclude-standard<Cr>
 " Map fzf + ag search to CTRL P
 nnoremap <C-g> :Ag <Cr>
 
@@ -166,6 +169,9 @@ let test#strategy = "dispatch"
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest<CR>
 nnoremap <silent><leader>' :TestFile<CR>
+
+" Run Rubocop
+nmap <Leader>r :Dispatch bundle exec rubocop %<CR>
 
 " Extra <CR> is for disabling /"Press ENTER or type command to continue/"
 nnoremap <silent><leader>e :Exp<CR><CR>
@@ -223,3 +229,4 @@ hi CocErrorFloat guifg=Magenta guibg=Magenta
 " NERDTree tricks
 map <C-n> :NERDTreeToggle<CR>
 map <leader>nf :NERDTreeFind<CR>
+
