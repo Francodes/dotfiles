@@ -4,3 +4,6 @@ SAVEHIST=10000
 HISTFILE=~/.zsh_history
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward
+
+# Load direnv
+eval "$(direnv hook zsh)"

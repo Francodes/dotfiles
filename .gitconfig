@@ -1,9 +1,6 @@
 [user]
   name  = Francisco Marcano
-  email = franco@hey.com
-
-[credential]
-  helper = osxkeychain
+  email = francisco.marcano@shopify.com
 
 [alias]
   a    = add
