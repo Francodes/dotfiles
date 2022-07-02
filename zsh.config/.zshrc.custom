@@ -5,9 +5,6 @@ HISTFILE=~/.zsh_history
 bindkey -v
 bindkey "^R" history-incremental-pattern-search-backward
 
-# Load direnv
-eval "$(direnv hook zsh)"
-
 # Alias VIM and attach TMUX if exists
 export EDITOR=vim
 
