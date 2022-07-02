@@ -10,6 +10,7 @@ if ! command -v ag &> /dev/null; then
   sudo apt-get install -y silversearcher-ag
 fi
 
+ln -svf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/dotfiles/vim.config/.* ~/
 mkdir -p ~/.vim/autoload/
 ln -svf ~/dotfiles/vim.config/plug.vim  ~/.vim/autoload/
@@ -19,6 +20,6 @@ ln -svf ~/dotfiles/tmux.config/.* ~/
 
 [ ! -f $ZSHRC_LOCAL ] && echo "\nsource $ZSHRC_LOCAL" >> ~/.zshrc
 
-ln -svf ~/dotfiles/zsh.config/.zshrc.local ~/.zshrc.local
+ln -svf ~/dotfiles/zsh.config/.* ~/
 
 nvim --headless +PlugInstall +qall

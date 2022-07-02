@@ -7,3 +7,12 @@ bindkey "^R" history-incremental-pattern-search-backward
 
 # Load direnv
 eval "$(direnv hook zsh)"
+
+# Alias VIM and attach TMUX if exists
+export EDITOR=vim
+
+alias vim="nvim"
+
+if [ $SSH_CLIENT ] && [ ! $TMUX  ]; then
+  tmux attach || tmux
+fi
