@@ -5,14 +5,6 @@ if ! command -v brew &> /dev/null; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-if ! command -v zsh &> /dev/null; then
-  brew install zsh
-fi
-
-if ! command -v tmux &> /dev/null; then
-  brew install tmux
-fi
-
 if ! command -v fzf &> /dev/null; then
   brew install fzf
 fi
@@ -21,20 +13,30 @@ if ! command -v ag &> /dev/null; then
   brew install the_silver_searcher
 fi
 
-if ! command -v node &> /dev/null; then
-  brew install node
-fi
+if [ ! "$SPIN" ]; then
+  if ! command -v zsh &> /dev/null; then
+    brew install zsh
+  fi
 
-if ! command -v zsh &> /dev/null; then
-  brew install neovim
-fi
+  if ! command -v tmux &> /dev/null; then
+    brew install tmux
+  fi
 
-if ! brew list brew-gem &> /dev/null; then
-  brew install brew-gem
-fi
+  if ! command -v node &> /dev/null; then
+    brew install node
+  fi
 
-if ! command -v solargraph &> /dev/null; then
-  brew gem install solargraph
+  if ! command -v zsh &> /dev/null; then
+    brew install neovim
+  fi
+
+  if ! brew list brew-gem &> /dev/null; then
+    brew install brew-gem
+  fi
+
+  if ! command -v solargraph &> /dev/null; then
+    brew gem install solargraph
+  fi
 fi
 
 ln -svf ~/dotfiles/.gitconfig ~/.gitconfig
