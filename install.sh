@@ -1,19 +1,30 @@
 #!/bin/zsh
 ZSHRC_LOCAL="~/.zshrc.local"
 
-if ! command -v brew &> /dev/null; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+if [ "$SPIN" ]; then
 
-if ! command -v fzf &> /dev/null; then
-  brew install fzf
-fi
+  if ! command -v fzf &> /dev/null; then
+    sudo apt-get install -y fzf
+  fi
 
-if ! command -v ag &> /dev/null; then
-  brew install the_silver_searcher
-fi
+  if ! command -v ag &> /dev/null; then
+    sudo apt-get install -y silversearcher-ag
+  fi
 
-if [ ! "$SPIN" ]; then
+else
+
+  if ! command -v brew &> /dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
+
+  if ! command -v fzf &> /dev/null; then
+    brew install fzf
+  fi
+
+  if ! command -v ag &> /dev/null; then
+    brew install the_silver_searcher
+  fi
+
   if ! command -v zsh &> /dev/null; then
     brew install zsh
   fi
@@ -37,6 +48,7 @@ if [ ! "$SPIN" ]; then
   if ! command -v solargraph &> /dev/null; then
     brew gem install solargraph
   fi
+
 fi
 
 ln -svf ~/dotfiles/.gitconfig ~/.gitconfig
