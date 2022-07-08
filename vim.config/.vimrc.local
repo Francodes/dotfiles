@@ -115,7 +115,7 @@ nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
 map <leader>gf <c-w>vgf
 
 " Toggle relative line numbers
-nnoremap <leader>rn :set relativenumber!<cr>
+nnoremap <leader>rl :set relativenumber!<cr>
 
 " If fzf installed using git
 set rtp+=~/.fzf

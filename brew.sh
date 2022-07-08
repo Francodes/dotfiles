@@ -49,6 +49,10 @@ brew install prettier
 brew install docker-compose
 brew install awscli
 brew install poppler
+brew install fzf
+brew install neovim
+brew install brew-gem
+brew gem install solargraph
 
 # Installs Casks
 brew tap homebrew/cask
