@@ -38,4 +38,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shopify/shadowenv.vim'
 
 " All of your Plugins must be added before the following line
-call plug#end()              " required
+call plug#end()

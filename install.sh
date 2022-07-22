@@ -41,15 +41,22 @@ else
     brew install neovim
   fi
 
-  if ! brew list brew-gem &> /dev/null; then
-    brew install brew-gem
-  fi
+  if [ command -v gem &> /dev/null ]; then
+    if ! command -v solargraph &> /dev/null; then
+      gem install solargraph
+    fi
 
-  if ! command -v solargraph &> /dev/null; then
-    brew gem install solargraph
-  fi
+    if ! command -v rubocop-lsp &> /dev/null; then
+      gem install rubocop
+      gem install rubocop-lsp
+    fi
 
+    if ! command -v srb &> /dev/null; then
+      gem install srb
+    fi
+  fi
 fi
+
 
 ln -svf ~/dotfiles/.gitconfig ~/.gitconfig
 ln -svf ~/dotfiles/vim.config/.* ~/

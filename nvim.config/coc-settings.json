@@ -18,14 +18,14 @@
       "initializationOptions": {},
       "settings": {}
     },
-    "rubocop": {
-      "command": "bundle",
-      "args": ["exec", "rubocop-lsp"],
+    "solargraph": {
+      "command": "solargraph",
+      "args": ["stdio"],
       "filetypes": ["ruby"]
     },
-    "solargraph-local": {
-      "command": "bundle",
-      "args": ["exec", "solargraph", "stdio"],
+    "rubocop": {
+      "command": "rubocop-lsp",
+      "args": [],
       "filetypes": ["ruby"]
     }
   }
