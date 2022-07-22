@@ -40,20 +40,20 @@ else
   if ! command -v zsh &> /dev/null; then
     brew install neovim
   fi
+fi
 
-  if [ command -v gem &> /dev/null ]; then
-    if ! command -v solargraph &> /dev/null; then
-      gem install solargraph
-    fi
+if [ command -v gem &> /dev/null ]; then
+  if ! command -v solargraph &> /dev/null; then
+    gem install solargraph
+  fi
 
-    if ! command -v rubocop-lsp &> /dev/null; then
-      gem install rubocop
-      gem install rubocop-lsp
-    fi
+  if ! command -v rubocop-lsp &> /dev/null; then
+    gem install rubocop
+    gem install rubocop-lsp
+  fi
 
-    if ! command -v srb &> /dev/null; then
-      gem install srb
-    fi
+  if ! command -v srb &> /dev/null; then
+    gem install srb
   fi
 fi
 
