@@ -33,9 +33,13 @@ Plug 'vim-airline/vim-airline'      " Vim powerline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'Shopify/shadowenv.vim'
+
+" Testing these
+Plug 'neovim/nvim-lspconfig'
+Plug 'tami5/lspsaga.nvim'
+Plug 'folke/lsp-colors.nvim'
+Plug 'folke/trouble.nvim'
 
 " All of your Plugins must be added before the following line
 call plug#end()

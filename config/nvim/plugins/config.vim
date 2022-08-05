@@ -107,9 +107,7 @@ nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
 nnoremap <silent><leader>x :x<CR>
 " Open Vim configuration file for editing
-nnoremap <silent><leader>2 :e ~/.vimrc<CR>
-" Source Vim configuration file and install plugins
-nnoremap <silent><leader>1 :source ~/.vimrc \| :PlugInstall<CR>
+nnoremap <silent><leader>1 :e ~/.config/nvim/plugins/config.vim<CR>
 "
 " Go to file on new plit
 map <leader>gf <c-w>vgf

@@ -1,6 +1,5 @@
 [user]
   name  = Francisco Marcano
-  email = francisco.marcano@shopify.com
 
 [alias]
   a    = add
@@ -36,8 +35,8 @@
   ui     = true
 
 [core]
-  excludesfile = ~/.global_gitignore
-  editor       = vim
+  excludesfile = ~/.gitignore
+  editor       = nvim
   whitespace   = cr-at-eol
 
 [apply]
