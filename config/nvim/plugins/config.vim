@@ -2,7 +2,7 @@ set nocompatible " be iMproved, required
 filetype off     " required
 filetype plugin indent on    " required
 
-" Leader key is SPACE, I find it the best
+" Leader key is SPACE
 let mapleader = " "
 
 " Look and Feel settings
@@ -12,21 +12,18 @@ colorscheme gruvbox
 set t_Co=256
 let g:gruvbox_contrast_dark = 'hard'
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
+set wildmode=longest,list   " get bash-like tab completions
 set ttyfast
 set lazyredraw
 set updatetime=300
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+set cursorline
 
 " Numbers
 set number
 set numberwidth=4
 set ruler
-
-" paste mode
-nnoremap <F5> :set invpaste paste?<CR>
-set pastetoggle=<F5>
-set showmode
 
 " Treat long lines as break lines
 map j gj
@@ -47,11 +44,6 @@ nmap z za
 
 " Disable all bells and whistles
 set noerrorbells visualbell t_vb=
-
-" Ack tricks
-let g:ackprg = 'ag --vimgrep'
-nmap <leader>a :Ack! ""<Left>
-nmap <leader>A :Ack! "\b<cword>\b"<CR>
 
 " Tab Options
 set shiftwidth=2
@@ -80,7 +72,7 @@ set incsearch  " Jumping search
 set laststatus=2
 
 " Allow copy and paste from system clipboard
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Spellcheck for features and markdown
 au BufRead,BufNewFile *.md setlocal spell
@@ -107,7 +99,8 @@ nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
 nnoremap <silent><leader>x :x<CR>
 " Open Vim configuration file for editing
-nnoremap <silent><leader>1 :e ~/.config/nvim/plugins/config.vim<CR>
+nnoremap <silent><leader>1 :e $MYVIMRC<CR>
+nnoremap <silent><leader>2 :source $MYVIMRC<CR>
 "
 " Go to file on new plit
 map <leader>gf <c-w>vgf

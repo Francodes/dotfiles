@@ -9,7 +9,3 @@ bindkey "^R" history-incremental-pattern-search-backward
 export EDITOR=vim
 
 alias vim="nvim"
-
-if [ $SSH_CLIENT ] && [ ! $TMUX  ]; then
-  tmux attach || tmux
-fi
