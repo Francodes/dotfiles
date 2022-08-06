@@ -55,8 +55,8 @@ set expandtab
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set default encoding to utf-8
-set encoding=utf-8
-set termencoding=utf-8
+set encoding=UTF-8
+set termencoding=UTF-8
 
 " Disable backups and swap files
 set nobackup
