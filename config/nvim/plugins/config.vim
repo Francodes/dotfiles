@@ -8,9 +8,7 @@ let mapleader = " "
 " Look and Feel settings
 syntax enable
 set background=dark
-colorscheme gruvbox
 set t_Co=256
-let g:gruvbox_contrast_dark = 'hard'
 set wildmenu " when opening a file with e.g. :e ~/.vim<TAB> there is a graphical menu of all the matches
 set wildmode=longest,list   " get bash-like tab completions
 set ttyfast
@@ -19,6 +17,10 @@ set updatetime=300
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set cursorline
+
+" Colorscheme
+" let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 
 " Numbers
 set number

@@ -19,6 +19,7 @@ alias k="kubectl"
 
 # Utility
 alias hg='history | grep'
+alias lg='lazygit'
 
 # Custom commands
 kill_port() {

@@ -3,21 +3,18 @@
 /*/
 !/.gitignore
 zsh/plugins
+config/*
 
 # Except
 !install.sh
 !macos/
 !Brewfile
 !Rakefile
-!bat
 !bin/
 !config/
-!config/kitty/
 !config/nvim
 !gitignore
 !tmux.conf
 !zsh/
 !zshrc
 !gitconfig
-
-config/*
