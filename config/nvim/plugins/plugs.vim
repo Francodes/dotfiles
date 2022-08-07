@@ -26,12 +26,12 @@ Plug 'pangloss/vim-javascript'      " JavaScript support
 Plug 'leafgarland/typescript-vim'   " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'     " JS and JSX syntax
 Plug 'jparise/vim-graphql'          " GraphQL syntax
-Plug 'styled-components/vim-styled-components'
 
 Plug 'vim-airline/vim-airline'      " Vim powerline
 
+" Set up fzf and fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'             " Set up fzf and fzf.vim
+Plug 'junegunn/fzf.vim'
 
 Plug 'Shopify/shadowenv.vim'
 

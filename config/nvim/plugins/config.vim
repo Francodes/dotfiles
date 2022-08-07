@@ -6,6 +6,8 @@ filetype plugin indent on    " required
 let mapleader = " "
 
 " Look and Feel settings
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
 syntax enable
 set background=dark
 set t_Co=256
@@ -15,17 +17,16 @@ set ttyfast
 set lazyredraw
 set updatetime=300
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-set cursorline
-
-" Colorscheme
-" let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+highlight ColorColumn ctermbg=0
+highlight! link SignColumn LineNr
+set list
+set listchars=tab:␉·,trail:␠,nbsp:⎵
 
 " Numbers
 set number
 set numberwidth=4
 set ruler
+" set signcolumn=number
 
 " Treat long lines as break lines
 map j gj
@@ -72,6 +73,10 @@ set incsearch  " Jumping search
 
 " Always show the status line
 set laststatus=2
+
+" Scrolling
+set scrolloff=8
+set sidescrolloff=8
 
 " Allow copy and paste from system clipboard
 set clipboard^=unnamed,unnamedplus

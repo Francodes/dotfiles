@@ -3,7 +3,6 @@
 /*/
 !/.gitignore
 zsh/plugins
-config/*
 
 # Except
 !install.sh
@@ -18,3 +17,5 @@ config/*
 !zsh/
 !zshrc
 !gitconfig
+
+config/*
