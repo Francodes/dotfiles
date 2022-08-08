@@ -40,7 +40,9 @@ Plug 'vim-airline/vim-airline'      " Vim powerline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-Plug 'Shopify/shadowenv.vim'
+if $SPIN
+  Plug 'Shopify/shadowenv.vim'
+endif
 
 " Testing these
 Plug 'neovim/nvim-lspconfig'

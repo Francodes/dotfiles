@@ -1,2 +1,6 @@
+brew "nvim"
 brew "lazygit"
 brew "the_silver_searcher"
+
+tap "homebrew/cask-fonts"
+cask "font-jetbrains-mono-nerd-font"
