@@ -7,13 +7,7 @@
    ./brew.sh
    ```
 
-3. Get into the repo and run the install script
+2. Get into the repo and run the install script
 
    ```bash
    ./install.sh
-   ```
-
-4. _(optional)_ Add theme colors to Terminal
-
-   Gruvbox theme is included in the installation. Please make sure to run `Gruvbox-dark.terminal` to add
-   gruvbox the terminal theme. Vim gruvbox is installed by default.

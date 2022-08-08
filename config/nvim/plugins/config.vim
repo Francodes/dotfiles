@@ -179,3 +179,6 @@ map <leader>nf :NERDTreeFind<CR>
 
 " vim-commentary
 noremap \ :Commentary<CR>
+
+" lazy-git.vim
+nnoremap <silent><leader>gg :LazyGit<CR>

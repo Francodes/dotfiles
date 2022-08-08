@@ -1,3 +1,10 @@
+" Auto install Vim Plugs
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " Keep Plug commands between plug#begin() and plug#end().
 call plug#begin()
 
@@ -37,14 +44,15 @@ Plug 'Shopify/shadowenv.vim'
 
 " Testing these
 Plug 'neovim/nvim-lspconfig'
-Plug 'tami5/lspsaga.nvim'
+" Plug 'tami5/lspsaga.nvim'
+" Plug 'folke/trouble.nvim'
 Plug 'folke/lsp-colors.nvim'
-Plug 'folke/trouble.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git'
+Plug 'kdheepak/lazygit.nvim'
 
 " All of your Plugins must be added before the following line
 call plug#end()
