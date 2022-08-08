@@ -21,4 +21,5 @@ fi
 
 if [ "$TMUX" = "" ]; then
   tmux attach || tmux new -As0
+  tmux source-file ~/.tmux.conf
 fi
