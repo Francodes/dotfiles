@@ -1,14 +1,19 @@
 #!/bin/zsh
 ZSHRC_LOCAL="~/.zshrc.local"
 
-
-# Installs Homebrew
-if ! command -v brew &> /dev/null; then
-  /bin/bash -c "$(NONINTERACTIVE=1 curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ `uname` == "Darwin" ]]; then
+  curdir=$(pwd)
+  cd macos
+  sh ./install.sh
+  cd $curdir
 fi
 
-# Install brew dependencies
-brew bundle
+if [[ `uname` == "Linux" ]]; then
+  curdir=$(pwd)
+  cd linux
+  sh ./install.sh
+  cd $curdir
+fi
 
 # Configure dotfiles
 rake install
