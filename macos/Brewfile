@@ -1,3 +1,5 @@
+brew "tmux"
+brew "solargraph"
 brew "nvim"
 brew "lazygit"
 brew "the_silver_searcher"
