@@ -179,3 +179,8 @@ map <leader>nf :NERDTreeFind<CR>
 
 " lazy-git.vim
 nnoremap <silent><leader>gg :LazyGit<CR>
+
+" Lua specific configurations
+lua << EOF
+  require('pqf').setup()
+EOF
