@@ -22,6 +22,3 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Keeps nvim plugins up todate
 nvim --noplugin --headless -c 'PlugInstall' -c 'qa'
-
-# Adds tmux plugins
-rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
