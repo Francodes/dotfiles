@@ -15,9 +15,6 @@ PATH=~/.bin:$PATH
 GPG_TTY=$(tty)
 export GPG_TTY
 
-if [ $SPIN ]; then
-fi
-
 if [ "$SPIN" ]; then
   echo "\nsource /etc/zsh/zshrc.default.inc.zsh" >> ~/.zshrc
 fi

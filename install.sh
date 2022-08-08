@@ -1,6 +1,4 @@
 #!/bin/zsh
-ZSHRC_LOCAL="~/.zshrc.local"
-
 if [[ `uname` == "Darwin" ]]; then
   curdir=$(pwd)
   cd macos
@@ -27,7 +25,3 @@ nvim --noplugin --headless -c 'PlugInstall' -c 'qa'
 
 # Adds tmux plugins
 rm -rf ~/.tmux/plugins/tpm && git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-if ! cat ~/.zshrc | grep $ZSHRC_LOCAL &> /dev/null; then
-  echo "\nsource $ZSHRC_LOCAL" >> ~/.zshrc
-fi
