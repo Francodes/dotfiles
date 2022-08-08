@@ -40,7 +40,11 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'tami5/lspsaga.nvim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'folke/trouble.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
+
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git'
 
 " All of your Plugins must be added before the following line
 call plug#end()
