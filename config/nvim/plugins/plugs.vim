@@ -44,10 +44,9 @@ if $SPIN
   Plug 'Shopify/shadowenv.vim'
 endif
 
-" Testing these
 Plug 'neovim/nvim-lspconfig'
-" Plug 'tami5/lspsaga.nvim'
-" Plug 'folke/trouble.nvim'
+Plug 'kkharji/lspsaga.nvim'
+Plug 'folke/trouble.nvim'
 Plug 'folke/lsp-colors.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
