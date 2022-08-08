@@ -9,7 +9,7 @@ FILES = [
   'gitconfig',
   'tmux.conf',
   'zsh',
-  'zshrc.local'
+  'zshrc'
 ].freeze
 
 desc "install the dot files into user's home directory"
