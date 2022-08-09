@@ -9,3 +9,8 @@ fi
 if ! command -v ag &> /dev/null; then
   sudo apt-get install -y silversearcher-ag
 fi
+
+# Installs hub (https://github.com/github/hub)
+if ! command -v hub &> /dev/null; then
+  sudo apt install hub
+fi

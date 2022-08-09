@@ -3,6 +3,7 @@ brew "solargraph"
 brew "nvim"
 brew "lazygit"
 brew "the_silver_searcher"
+brew "hub"
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono-nerd-font"

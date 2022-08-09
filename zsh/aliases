@@ -15,7 +15,9 @@ alias pr="hub pull-request"
 alias dc="docker-compose"
 alias k="kubectl"
 
-# JS
+# Aliases for ls
+alias ll='ls -lh --color=always'
+alias la='ls -lah --color=always'
 
 # Utility
 alias hg='history | grep'
