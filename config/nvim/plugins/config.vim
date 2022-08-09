@@ -106,14 +106,12 @@ set backspace=indent,eol,start
 " +++ Shortcuts +++
 " Open Buffer
 nnoremap <silent><leader>l :Buffers<CR>
-" Open test file for a current file
-nnoremap <silent><leader>s :A<CR>
 " Open test file for a current file in a vertical window
 nnoremap <silent><leader>v :AV<CR>
 " Vertically split screen
-nnoremap <silent><leader>\ :vs<CR>
+nnoremap <silent><leader>v :vs<CR>
 " Split screen
-nnoremap <silent><leader>/ :split<CR>
+nnoremap <silent><leader>h :split<CR>
 
 " Faster saving and exiting
 nnoremap <silent><leader>w :w!<CR>
@@ -153,7 +151,6 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
-nnoremap <leader>= <C-w>=
 " Map H/L to move to the beginning/end of a line
 nnoremap H ^
 nnoremap L g_
