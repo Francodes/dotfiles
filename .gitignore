@@ -16,7 +16,7 @@ zsh/plugins
 !gitignore
 !tmux.conf
 !zsh/
-!zshrc
+!zshrc.custom
 !gitconfig
 
 config/*
