@@ -11,6 +11,7 @@ call plug#begin()
 Plug 'vim-test/vim-test'            " Run tests for multiple formats
 Plug 'tpope/vim-rails'              " Rails plugin
 Plug 'adelarsq/vim-matchit'         " Match most tags using %
+Plug 'folke/zen-mode.nvim'          " Zenmode editing of files
 
 Plug 'tpope/vim-endwise'            " Autocomplete end after a do
 Plug 'tpope/vim-sleuth'             " Auto-detect indentation format

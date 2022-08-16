@@ -183,7 +183,11 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 " lazy-git.vim
 nnoremap <silent><leader>gg :LazyGit<CR>
 
+" Zenmode
+nnoremap <silent><leader>z :ZenMode<CR>
+
 " Lua specific configurations
 lua << EOF
   require('pqf').setup()
+  require("zen-mode").setup()
 EOF
