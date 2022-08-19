@@ -18,5 +18,7 @@ zsh/plugins
 !zsh/
 !zshrc.custom
 !gitconfig
+!package.json
+!package-lock.json
 
 config/*
