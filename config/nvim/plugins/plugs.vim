@@ -41,7 +41,7 @@ Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quick
 " HTML helpers
 Plug 'AndrewRadev/tagalong.vim'     " HTML tag rename open/close
 Plug 'mattn/emmet-vim'              " Allow for emmet commands in HTML
-Plug 'tpope/ragtag.vim'             " HTML conviniences
+Plug 'tpope/vim-ragtag'             " HTML conviniences
 
 " NerdTree
 Plug 'scrooloose/nerdtree'          " File explorer support
