@@ -1,6 +1,12 @@
 #!/bin/zsh
 ZSHRC_LOCAL="~/.zshrc.custom"
 
+pathadd() {
+  if [ -d "$1" ] && [[ ":$PATH:" != *":$1:"* ]]; then
+      PATH="${PATH:+"$PATH:"}$1"
+  fi
+}
+
 if [[ `uname` == "Darwin" ]]; then
   curdir=$(pwd)
   cd macos
@@ -24,6 +30,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Keeps nvim plugins up todate
 nvim --noplugin --headless -c 'PlugInstall' -c 'qa'
+
+# Install NPM packages
+npm install
+pathadd ./node_modules/.bin
 
 if ! cat ~/.zshrc | grep $ZSHRC_LOCAL &> /dev/null; then
   echo "source $ZSHRC_LOCAL" >> ~/.zshrc

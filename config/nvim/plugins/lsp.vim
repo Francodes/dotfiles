@@ -43,7 +43,7 @@ function nvim_lsp_setup()
 
   -- Use a loop to conveniently call 'setup' on multiple servers and
   -- map buffer local keybindings when the language server attaches
-  local servers = { "solargraph" }
+  local servers = { "solargraph", "tsserver" }
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
@@ -96,8 +96,8 @@ function nvim_cmp_setup()
       end,
     },
     mapping = {
-      ["<C-p>"] = cmp.mapping.select_prev_item(),
-      ["<C-n>"] = cmp.mapping.select_next_item(),
+      -- ["<C-p>"] = cmp.mapping.select_prev_item(),
+      -- ["<C-n>"] = cmp.mapping.select_next_item(),
       ["<C-d>"] = cmp.mapping.scroll_docs(-4),
       ["<C-f>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(),
@@ -108,7 +108,7 @@ function nvim_cmp_setup()
         select = false,
       }),
 
-      ["<Tab>"] = cmp.mapping(function(fallback)
+      ["<C-n>"] = cmp.mapping(function(fallback)
         if cmp.visible() then
           cmp.select_next_item()
         elseif has_words_before() then
@@ -118,7 +118,7 @@ function nvim_cmp_setup()
         end
       end, { "i", "s" }),
 
-      ["<S-Tab>"] = cmp.mapping(function()
+      ["<C-p>"] = cmp.mapping(function()
         if cmp.visible() then
           cmp.select_prev_item()
         end
@@ -158,6 +158,9 @@ function nvim_cmp_setup()
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
   require('lspconfig')['solargraph'].setup {
+    capabilities = capabilities
+  }
+  require('lspconfig')['tsserver'].setup {
     capabilities = capabilities
   }
 end
