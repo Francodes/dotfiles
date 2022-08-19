@@ -38,6 +38,11 @@ Plug 'vim-airline/vim-airline'      " Vim powerline
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
 Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quickfix window
 
+" HTML helpers
+Plug 'AndrewRadev/tagalong.vim'     " HTML tag rename open/close
+Plug 'mattn/emmet-vim'              " Allow for emmet commands in HTML
+Plug 'tpope/ragtag.vim'             " HTML conviniences
+
 " NerdTree
 Plug 'scrooloose/nerdtree'          " File explorer support
 Plug 'Xuyuanp/nerdtree-git-plugin'  " Git marks on file explorer
