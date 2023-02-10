@@ -21,5 +21,9 @@ fi
 
 if [ $SSH_CLIENT ] && [ ! $TMUX  ]; then
   tmux attach || tmux
-  tmux source ~/.tmux.conf
 fi
+
+# if [ $TMUX ]; then
+#   ~/.tmux/plugins/tpm/bin/install_plugins
+#   tmux source ~/.tmux.conf
+# fi
