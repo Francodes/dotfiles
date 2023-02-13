@@ -3,4 +3,4 @@ let &packpath = &runtimepath
 
 source ~/.config/nvim/plugins/plugs.vim
 source ~/.config/nvim/plugins/config.vim
-source ~/.config/nvim/plugins/lsp.vim
+source ~/.config/nvim/plugins/lsp.lua

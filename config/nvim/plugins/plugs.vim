@@ -53,20 +53,24 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " LSP Related Plugins
+Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'kkharji/lspsaga.nvim'
-Plug 'folke/lsp-colors.nvim'
 
 " LSP Completion
-Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'github/copilot.vim'
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+Plug 'kkharji/lspsaga.nvim'
+Plug 'folke/lsp-colors.nvim'
+
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 
 " Adds icon support to multiple plugins
 Plug 'kyazdani42/nvim-web-devicons'
