@@ -29,11 +29,6 @@ Plug 'mileszs/ack.vim'              " Use ack in Vim
 Plug 'morhetz/gruvbox'              " Provides the 'gruvbox' color scheme
 Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 
-Plug 'pangloss/vim-javascript'      " JavaScript support
-Plug 'leafgarland/typescript-vim'   " TypeScript syntax
-Plug 'maxmellon/vim-jsx-pretty'     " JS and JSX syntax
-Plug 'jparise/vim-graphql'          " GraphQL syntax
-
 Plug 'vim-airline/vim-airline'      " Vim powerline
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
 Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quickfix window
