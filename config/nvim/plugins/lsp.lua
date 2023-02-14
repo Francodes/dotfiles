@@ -7,11 +7,10 @@ local lsp = require('lsp-zero').preset({
 
 lsp.setup_nvim_cmp({
   sources = {
-    { name = 'path' },
     { name = 'copilot' },
-    { name = 'nvim_lsp', keyword_length = 1 },
-    { name = 'buffer',   keyword_length = 3 },
-    { name = 'luasnip',  keyword_length = 2 },
+    { name = 'nvim_lsp' },
+    { name = 'path' },
+    { name = 'buffer' },
   }
 })
 

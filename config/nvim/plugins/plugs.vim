@@ -61,8 +61,6 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'github/copilot.vim'
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'
-Plug 'kkharji/lspsaga.nvim'
 Plug 'folke/lsp-colors.nvim'
 
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
