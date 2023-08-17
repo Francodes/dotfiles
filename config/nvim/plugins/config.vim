@@ -195,6 +195,10 @@ let g:tagalong_verbose = 1
 " Emmet
 let g:user_emmet_leader_key = ','
 
+" Copilot
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
+
 " Lua specific configurations
 lua << EOF
   require('pqf').setup()
