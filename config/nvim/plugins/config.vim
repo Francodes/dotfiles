@@ -186,9 +186,6 @@ nnoremap <silent><leader>gg :LazyGit<CR>
 " Zenmode
 nnoremap <silent><leader>z :ZenMode<CR>
 
-" LSPZero
-nnoremap <silent><leader>f :LspZeroFormat<CR>
-
 " Tagalong
 let g:tagalong_verbose = 1
 
