@@ -136,15 +136,14 @@ nnoremap <C-g> :Ag <Cr>
 
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
+
 " vim-test shortcut for running tests
 nnoremap <silent><leader>; :TestNearest CI=false<CR>
 nnoremap <silent><leader>' :TestFile CI=false<CR>
 
 " Run Rubocop
 nmap <Leader>r :Dispatch bundle exec rubocop %<CR>
-
-" Extra <CR> is for disabling /"Press ENTER or type command to continue/"
-nnoremap <silent><leader>e :Exp<CR><CR>
+nmap <leader>ra :Dispatch bundle exec rubocop -a %<CR>
 
 " Easier movement between split windows CTRL + {h, j, k, l}
 nnoremap <c-h> <c-w>h
