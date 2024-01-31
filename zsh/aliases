@@ -43,4 +43,4 @@ setopt PROMPT_SUBST
 PROMPT='%{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[green]%}${vcs_info_msg_0_} %{$reset_color%}$ '
 
 # Rubocop
-alias diffcop="{git ls-files --others --exclude-standard & git diff origin/main --diff-filter=d --name-only; } | xargs rubocop --force-exclusion"
+alias diffcop="{git ls-files --others --exclude-standard & git diff origin/master --diff-filter=d --name-only; } | xargs rubocop --force-exclusion"
