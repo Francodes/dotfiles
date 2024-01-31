@@ -23,6 +23,7 @@ Plug 'tpope/vim-fugitive'           " :Gblame
 Plug 'tpope/vim-rhubarb'            " :GBrowse
 Plug 'tpope/vim-surround'           " Helps inside (), '', {}, etc
 Plug 'tpope/vim-commentary'         " gc/gcc - Commenting functions
+Plug 'brooth/far.vim'               " Adds :Far command to do Find and Replace
 
 Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
 Plug 'mileszs/ack.vim'              " Use ack in Vim
