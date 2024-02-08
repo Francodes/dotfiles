@@ -44,3 +44,8 @@ PROMPT='%{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[green]%}${vcs_info_msg_0_} %{$reset_c
 
 # Rubocop
 alias diffcop="{git ls-files --others --exclude-standard & git diff origin/master --diff-filter=d --name-only; } | xargs rubocop --force-exclusion"
+
+# Strety
+alias strety="cd ~/Work/strety"
+alias production="heroku run -a strety-production rails c"
+alias staging="heroku run -a strety-staging rails c"

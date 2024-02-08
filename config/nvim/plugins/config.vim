@@ -138,8 +138,10 @@ nnoremap <C-g> :Ag <Cr>
 let test#strategy = "dispatch"
 
 " vim-test shortcut for running tests
-nnoremap <silent><leader>; :TestNearest CI=false<CR>
-nnoremap <silent><leader>' :TestFile CI=false<CR>
+nnoremap <silent><leader>; :TestNearest<CR>
+nnoremap <silent><leader>' :TestFile<CR>
+nnoremap <silent><leader>;; :TestNearest CI=false<CR>
+nnoremap <silent><leader>'' :TestFile CI=false<CR>
 
 " Run Rubocop
 nmap <Leader>r :Dispatch bundle exec rubocop %<CR>
