@@ -14,7 +14,6 @@ Plug 'adelarsq/vim-matchit'         " Match most tags using %
 Plug 'folke/zen-mode.nvim'          " Zenmode editing of files
 
 Plug 'tpope/vim-endwise'            " Autocomplete end after a do
-Plug 'tpope/vim-sleuth'             " Auto-detect indentation format
 Plug 'tpope/vim-speeddating'        " Enhances Vim increment/decrement
 Plug 'tpope/vim-dispatch'           " Runs helper tasks async
 Plug 'tpope/vim-repeat'             " Repeat (.) support for plugin tasks
@@ -26,9 +25,7 @@ Plug 'tpope/vim-commentary'         " gc/gcc - Commenting functions
 Plug 'brooth/far.vim'               " Adds :Far command to do Find and Replace
 
 Plug 'airblade/vim-gitgutter'       " Show git diff of lines edited
-Plug 'mileszs/ack.vim'              " Use ack in Vim
 Plug 'morhetz/gruvbox'              " Provides the 'gruvbox' color scheme
-Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 
 Plug 'vim-airline/vim-airline'      " Vim powerline
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
@@ -47,6 +44,10 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Better file highlighting
 " Set up fzf and fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 
 " LSP Related Plugins
 Plug 'neovim/nvim-lspconfig'
@@ -69,10 +70,6 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}
 " Adds icon support to multiple plugins
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
-
-if $SPIN
-  Plug 'Shopify/shadowenv.vim'
-endif
 
 " All of your Plugins must be added before the following line
 call plug#end()

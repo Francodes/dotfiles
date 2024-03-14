@@ -145,7 +145,7 @@ nnoremap <silent><leader>'' :TestFile CI=false<CR>
 
 " Run Rubocop
 nmap <Leader>r :Dispatch bundle exec rubocop %<CR>
-nmap <leader>ra :Dispatch bundle exec rubocop -a %<CR>
+nmap <leader>ra :Dispatch! bundle exec rubocop -a %<CR>
 
 " Easier movement between split windows CTRL + {h, j, k, l}
 nnoremap <c-h> <c-w>h
@@ -175,6 +175,7 @@ autocmd VimEnter * silent !echo -ne "\e[6 q"
 augroup END
 
 " NERDTree
+let NERDTreeNaturalSort = 1
 map <C-n> :silent! NERDTreeToggle<CR>
 map <leader>nf :silent! NERDTreeFind<CR>
 
@@ -201,4 +202,9 @@ let g:copilot_no_tab_map = v:true
 lua << EOF
   require('pqf').setup()
   require("zen-mode").setup()
+
+  -- indent-blankline
+  require("ibl").setup {
+    scope = { show_start = false },
+  }
 EOF
