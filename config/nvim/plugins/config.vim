@@ -10,7 +10,6 @@ colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'hard'
 set background=dark
 set t_Co=256
-highlight ColorColumn ctermbg=0
 highlight! link SignColumn LineNr
 highlight! link WinSeparator GruvboxFg
 highlight link GitGutterAdd GruvboxGreen
@@ -138,10 +137,10 @@ nnoremap <C-g> :Ag <Cr>
 let test#strategy = "dispatch"
 
 " vim-test shortcut for running tests
-nnoremap <silent><leader>; :TestNearest<CR>
-nnoremap <silent><leader>' :TestFile<CR>
-nnoremap <silent><leader>;; :TestNearest CI=false<CR>
-nnoremap <silent><leader>'' :TestFile CI=false<CR>
+nnoremap <silent><leader>; :TestNearest --quiet --defer-output<CR>
+nnoremap <silent><leader>' :TestFile --quiet --defer-output<CR>
+nnoremap <silent><leader>;; :TestNearest --quiet --defer-output CI=false<CR>
+nnoremap <silent><leader>'' :TestFile CI=false --quiet --defer-output<CR>
 
 " Run Rubocop
 nmap <Leader>r :Dispatch bundle exec rubocop %<CR>

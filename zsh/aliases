@@ -43,7 +43,7 @@ setopt PROMPT_SUBST
 PROMPT='%{$fg[cyan]%}${PWD/#$HOME/~} %{$fg[green]%}${vcs_info_msg_0_} %{$reset_color%}$ '
 
 # Rubocop
-alias diffcop="{git ls-files --others --exclude-standard & git diff origin/master --diff-filter=d --name-only; } | xargs bundle exec rubocop --force-exclusion"
+alias diffcop="{git ls-files --others --exclude-standard & git diff --diff-filter=d --name-only origin/master ; } | xargs bundle exec rubocop --force-exclusion"
 
 # Strety
 alias strety="cd ~/Work/strety"
