@@ -10,6 +10,7 @@ call plug#begin()
 
 Plug 'vim-test/vim-test'            " Run tests for multiple formats
 Plug 'tpope/vim-rails'              " Rails plugin
+Plug 'airblade/vim-localorie'       " Rails localization
 Plug 'adelarsq/vim-matchit'         " Match most tags using %
 Plug 'folke/zen-mode.nvim'          " Zenmode editing of files
 

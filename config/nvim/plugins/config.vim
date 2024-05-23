@@ -197,6 +197,10 @@ let g:user_emmet_leader_key = ','
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 let g:copilot_no_tab_map = v:true
 
+" Localorie
+nnoremap <silent> <leader>lt :call localorie#translate()<CR>
+nnoremap <silent> <leader>le :echo localorie#expand_key()<CR>
+
 " Lua specific configurations
 lua << EOF
   require('pqf').setup()
