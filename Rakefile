@@ -15,8 +15,6 @@ FILES = [
 desc "install the dot files into user's home directory"
 task :install do
   FILES.each do |file|
-    next if %w[Rakefile README LICENSE].include? file
-
     replace_file(file)
   end
 end
