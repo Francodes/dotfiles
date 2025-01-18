@@ -6,16 +6,8 @@ filetype plugin indent on    " required
 let mapleader = " "
 
 " Look and feel
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = 'hard'
-set background=dark
 set t_Co=256
 highlight! link SignColumn LineNr
-highlight! link WinSeparator GruvboxFg
-highlight link GitGutterAdd GruvboxGreen
-highlight link GitGutterChange GruvboxAqua
-highlight link GitGutterDelete GruvboxRed
-highlight link GitGutterChangeDelete GruvboxAqua
 set colorcolumn=80
 
 " Settings
@@ -107,24 +99,16 @@ set backspace=indent,eol,start
 nnoremap <silent><leader>l :Buffers<CR>
 " Open test file for a current file in a vertical window
 nnoremap <silent><leader>v :AV<CR>
-" Vertically split screen
-nnoremap <silent><leader>v :vs<CR>
-" Split screen
-nnoremap <silent><leader>h :split<CR>
 
 " Faster saving and exiting
 nnoremap <silent><leader>w :w!<CR>
 nnoremap <silent><leader>q :q!<CR>
-nnoremap <silent><leader>x :x<CR>
 " Open/Source Vim configuration file
 nnoremap <silent><leader>1 :e $MYVIMRC<CR>
 nnoremap <silent><leader>2 :source $MYVIMRC<CR>
 
 " Go to file on new plit
 map <leader>gf <c-w>vgf
-
-" Toggle relative line numbers
-nnoremap <leader>rl :set relativenumber!<cr>
 
 " If fzf installed using git
 set rtp+=~/.fzf
@@ -190,24 +174,12 @@ nnoremap <silent><leader>z :ZenMode<CR>
 " Tagalong
 let g:tagalong_verbose = 1
 
-" Emmet
-let g:user_emmet_leader_key = ','
-
 " Copilot
 imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+imap <C-L> <Plug>(copilot-accept-word)
+imap <C-]> <Plug>(copilot-dismiss)
 let g:copilot_no_tab_map = v:true
 
 " Localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :echo localorie#expand_key()<CR>
-
-" Lua specific configurations
-lua << EOF
-  require('pqf').setup()
-  require("zen-mode").setup()
-
-  -- indent-blankline
-  require("ibl").setup {
-    scope = { show_start = false },
-  }
-EOF
