@@ -23,6 +23,8 @@ Plug 'ellisonleao/gruvbox.nvim'     " Provides the 'gruvbox' color scheme
 
 " Mini Utils
 Plug 'echasnovski/mini.nvim'        " Adds mini utilities, enabled in luaconfig.lua
+Plug 'nvim-lua/plenary.nvim'        " Provides lua utilities
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' } " Provides telescope support
 
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
 Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quickfix window
