@@ -110,13 +110,6 @@ nnoremap <silent><leader>2 :source $MYVIMRC<CR>
 " Go to file on new plit
 map <leader>gf <c-w>vgf
 
-" If fzf installed using git
-set rtp+=~/.fzf
-" Map fzf search to CTRL P
-nnoremap <C-p> :GFiles --cached --others --exclude-standard<Cr>
-" Map fzf + ag search to CTRL P
-nnoremap <C-g> :Ag <Cr>
-
 " make test commands execute using dispatch.vim
 let test#strategy = "dispatch"
 
@@ -159,9 +152,6 @@ augroup END
 
 " lazy-git.vim
 nnoremap <silent><leader>gg :LazyGit<CR>
-
-" Zenmode
-nnoremap <silent><leader>z :ZenMode<CR>
 
 " Tagalong
 let g:tagalong_verbose = 1

@@ -37,6 +37,12 @@ require("mini.diff").setup()
 require("mini.jump").setup()
 require("mini.jump2d").setup()
 require("mini.sessions").setup({ autoread = true })
+require('mini.pick').setup()
+vim.keymap.set('n', '<leader>ff', ":Pick files tool='git'<CR>", { desc = 'mini.pick files' })
+vim.keymap.set('n', '<leader>fg', ":Pick grep_live tool='git'<CR>", { desc = 'mini.pick live grep' })
+vim.keymap.set('n', '<leader>fb', ":Pick buffers tool='git'<CR>", { desc = 'mini.pick buffers' })
+vim.keymap.set('n', '<leader>fh', ":Pick help tool='git'<CR>", { desc = 'mini.pick helptags' })
+require('mini.extra').setup()
 
 -- Appearance
 require("mini.icons").setup()
@@ -52,12 +58,6 @@ indentscope.setup({
   options = { try_as_border = true }
 })
 
--- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
-vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 
 -- nvim-tree
 vim.g.loaded_netrw = 1

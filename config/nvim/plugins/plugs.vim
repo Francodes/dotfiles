@@ -23,8 +23,6 @@ Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quick
 
 " Mini Utils
 Plug 'echasnovski/mini.nvim'        " Adds mini utilities, enabled in luaconfig.lua
-Plug 'nvim-lua/plenary.nvim'        " Provides lua utilities
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' } " Provides telescope support
 Plug 'nvim-tree/nvim-tree.lua'      " Provides file explorer support
 Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
