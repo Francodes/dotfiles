@@ -157,14 +157,6 @@ au!
 autocmd VimEnter * silent !echo -ne "\e[6 q"
 augroup END
 
-" NERDTree
-let NERDTreeNaturalSort = 1
-map <C-n> :silent! NERDTreeToggle<CR>
-map <leader>nf :silent! NERDTreeFind<CR>
-
-" Exit Vim if NERDTree is the only window remaining in the only tab.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-
 " lazy-git.vim
 nnoremap <silent><leader>gg :LazyGit<CR>
 

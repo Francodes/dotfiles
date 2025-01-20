@@ -12,7 +12,6 @@ Plug 'vim-test/vim-test'            " Run tests for multiple formats
 Plug 'tpope/vim-rails'              " Rails plugin
 Plug 'airblade/vim-localorie'       " Rails localization
 Plug 'adelarsq/vim-matchit'         " Match most tags using %
-Plug 'folke/zen-mode.nvim'          " Zenmode editing of files
 
 Plug 'tpope/vim-dispatch'           " Runs helper tasks async
 
@@ -20,31 +19,24 @@ Plug 'tpope/vim-fugitive'           " :Gblame
 Plug 'tpope/vim-rhubarb'            " :GBrowse
 
 Plug 'ellisonleao/gruvbox.nvim'     " Provides the 'gruvbox' color scheme
+Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quickfix window
 
 " Mini Utils
 Plug 'echasnovski/mini.nvim'        " Adds mini utilities, enabled in luaconfig.lua
 Plug 'nvim-lua/plenary.nvim'        " Provides lua utilities
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' } " Provides telescope support
-
+Plug 'nvim-tree/nvim-tree.lua'      " Provides file explorer support
+Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
-Plug 'https://gitlab.com/yorickpeterse/nvim-pqf.git' " Adds better looking quickfix window
 
 " HTML helpers
 Plug 'AndrewRadev/tagalong.vim'     " HTML tag rename open/close
 Plug 'tpope/vim-ragtag'             " HTML conviniences
 
-" NerdTree
-Plug 'scrooloose/nerdtree'          " File explorer support
-Plug 'Xuyuanp/nerdtree-git-plugin'  " Git marks on file explorer
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "Better file highlighting
-
 " Set up fzf and fzf.vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 
 " LSP Related Plugins
 Plug 'neovim/nvim-lspconfig'
