@@ -11,6 +11,10 @@ require("gruvbox").setup({
   overrides = {
     StatusLine = { fg = "#1B1B1B", bg = "#1B1B1B" },
     StatusLineNC = { fg = "#1B1B1B", bg = "#1B1B1B" },
+    MiniStatuslineInactive = { fg = "#8E8070", bg = "#1B1B1B"  },
+    MiniStatuslineFilename = { fg = "#EBDBB2", bg = "#1B1B1B" },
+    MiniStatuslineDevinfo = { fg = "#8E8070", bg = "#1B1B1B" },
+    MiniStatuslineFileinfo = { fg = "#8E8070", bg = "#1B1B1B" },
   },
   palette_overrides = {
     dark0_hard = "#1B1B1B",
@@ -34,9 +38,12 @@ require('mini.move').setup()
 ---- Workflow
 require("mini.basics").setup()
 require("mini.diff").setup()
+require("mini.files").setup()
 require("mini.jump").setup()
 require("mini.jump2d").setup()
 require("mini.sessions").setup({ autoread = true })
+require('mini.bracketed').setup()
+require('mini.git').setup()
 require('mini.pick').setup()
 vim.keymap.set('n', '<leader>ff', ":Pick files tool='git'<CR>", { desc = 'mini.pick files' })
 vim.keymap.set('n', '<leader>fg', ":Pick grep_live tool='git'<CR>", { desc = 'mini.pick live grep' })
@@ -50,7 +57,13 @@ require("mini.statusline").setup()
 
 -- Others
 require('mini.fuzzy').setup()
-require('mini.hipatterns').setup()
+local hipatterns = require('mini.hipatterns')
+hipatterns.setup({
+  highlighters = {
+    -- Highlight hex color strings (`#rrggbb`) using that color
+    hex_color = hipatterns.gen_highlighter.hex_color(),
+  },
+})
 local indentscope = require('mini.indentscope')
 indentscope.setup({
   draw = { delay = 0, animation = indentscope.gen_animation.none() },
@@ -79,3 +92,12 @@ require("nvim-tree").setup({
 })
 vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true, desc = 'nvim-tree toggle' })
 vim.keymap.set('n', '<leader>nf', ':NvimTreeFindFile<CR>', { silent = true, desc = 'nvim-tree find file' })
+-- Disable mini.statusline in NvimTree
+local augroup = vim.api.nvim_create_augroup("UserMiniNvim", {})
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup,
+  pattern = "NvimTree",
+  callback = function(ev)
+    vim.b.ministatusline_disable = true
+  end,
+})
