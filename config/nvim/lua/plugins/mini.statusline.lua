@@ -1,7 +1,8 @@
 return {
   {
     "echasnovski/mini.statusline", 
-    config = function()
+    opts = {},
+    init = function()
       -- Disable mini.statusline in NvimTree
       local augroup = vim.api.nvim_create_augroup("UserMiniNvim", {})
       vim.api.nvim_create_autocmd("FileType", {
@@ -11,8 +12,6 @@ return {
           vim.b.ministatusline_disable = true
         end,
       })
-
-      require("mini.statusline").setup {}
     end,
   },
 }
