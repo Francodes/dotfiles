@@ -157,12 +157,6 @@ nnoremap <silent><leader>gg :LazyGit<CR>
 " Tagalong
 let g:tagalong_verbose = 1
 
-" Copilot
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-imap <C-L> <Plug>(copilot-accept-word)
-imap <C-]> <Plug>(copilot-dismiss)
-let g:copilot_no_tab_map = v:true
-
 " Localorie
 nnoremap <silent> <leader>lt :call localorie#translate()<CR>
 nnoremap <silent> <leader>le :echo localorie#expand_key()<CR>

@@ -27,6 +27,7 @@ Plug 'nvim-tree/nvim-tree.lua'      " Provides file explorer support
 Plug 'lukas-reineke/indent-blankline.nvim' " Show indent guide lines
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
+Plug 'zbirenbaum/copilot.lua'
 
 " HTML helpers
 Plug 'AndrewRadev/tagalong.vim'     " HTML tag rename open/close
@@ -49,7 +50,6 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-nvim-lua'
-Plug 'github/copilot.vim'
 Plug 'folke/lsp-colors.nvim'
 
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v1.x'}

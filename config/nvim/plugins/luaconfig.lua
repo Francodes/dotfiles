@@ -31,17 +31,21 @@ require("mini.ai").setup()
 require("mini.align").setup()
 require("mini.comment").setup()
 require("mini.operators").setup()
-require("mini.pairs").setup()
+require("mini.pairs").setup({
+  modes = { insert = true, command = true, terminal = false },
+  skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+  skip_ts = { "string" },
+  skip_unbalanced = true,
+  markdown = true,
+})
 require("mini.splitjoin").setup()
 require("mini.surround").setup()
-require('mini.move').setup()
 
 ---- Workflow
 require("mini.basics").setup()
 require("mini.diff").setup()
 require("mini.files").setup()
 require("mini.jump").setup()
-require("mini.jump2d").setup()
 require("mini.sessions").setup({ autoread = true })
 require('mini.bracketed').setup()
 require('mini.git').setup()
@@ -49,7 +53,9 @@ require('mini.pick').setup()
 vim.keymap.set('n', '<leader>ff', ":Pick files tool='git'<CR>", { desc = 'mini.pick files' })
 vim.keymap.set('n', '<leader>fg', ":Pick grep_live tool='git'<CR>", { desc = 'mini.pick live grep' })
 vim.keymap.set('n', '<leader>fb', ":Pick buffers tool='git'<CR>", { desc = 'mini.pick buffers' })
-vim.keymap.set('n', '<leader>fh', ":Pick help tool='git'<CR>", { desc = 'mini.pick helptags' })
+vim.keymap.set('n', '<leader>fr', ":Pick oldfiles preserve_order=true<CR>", { desc = 'mini.pick oldfiles' })
+vim.keymap.set('n', '<leader>fh', ":Pick hl_groups<CR>", { desc = 'mini.pick highlight groups' })
+vim.keymap.set('n', '<leader>fd', ":Pick diagnostic<CR>", { desc = 'mini.pick diagnostics' })
 require('mini.extra').setup()
 
 -- Appearance
@@ -101,4 +107,18 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function(ev)
     vim.b.ministatusline_disable = true
   end,
+})
+
+require("copilot").setup({
+  suggestion = {
+    enabled = true,
+    auto_trigger = true,
+    keymap = {
+      accept = "<C-j>",
+      accept_word = "<C-l>",
+       next = "<C-k>",
+       dismiss = "<C-h>",
+    },
+  },
+  copilot_node_command = "/Users/franco/.asdf/installs/nodejs/18.19.0/bin/node",
 })
