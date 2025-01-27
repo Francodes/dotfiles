@@ -9,6 +9,7 @@ require("gruvbox").setup({
   terminal_colors = true,
   contrast = "hard",
   overrides = {
+    NormalFloat = { fg = "#EBDBB2", bg = "#1B1B1B" },
     StatusLine = { fg = "#1B1B1B", bg = "#1B1B1B" },
     StatusLineNC = { fg = "#1B1B1B", bg = "#1B1B1B" },
     MiniStatuslineInactive = { fg = "#8E8070", bg = "#1B1B1B"  },
