@@ -2,7 +2,7 @@ return {
   -- Text Editing
   { "echasnovski/mini.ai", opts = {} },
   { "echasnovski/mini.comment", opts = {} },
-  { "echasnovski/mini.completion", opts = {} },
+  -- { "echasnovski/mini.completion", opts = {} },
   { "echasnovski/mini.extra", opts = {} },
   { "echasnovski/mini.splitjoin", opts = {} },
   { "echasnovski/mini.surround", opts = {} },
