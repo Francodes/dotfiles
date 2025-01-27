@@ -17,9 +17,16 @@ return {
     },
   },
   -- Workflow
-  { "echasnovski/mini.basics", opts = {} },
+  {
+    "echasnovski/mini.basics",
+    opts = {
+      options = { extra_ui = true },
+      mappings = { windows = true }
+    },
+  },
   { "echasnovski/mini.bracketed", opts = {} },
-  { "echasnovski/mini.diff", opts = {} },
+  { "echasnovski/mini.diff", opts = { view = { style = "number" } } },
+  { "echasnovski/mini.jump", opts = {} },
   { "echasnovski/mini.sessions", opts = { autoread = true } },
   {
     "echasnovski/mini.pick",
@@ -34,6 +41,7 @@ return {
     },
   },
   -- Appearance
+  { "echasnovski/mini.hipatterns", opts = {} },
   {
     "echasnovski/mini.statusline", 
     opts = {},

@@ -7,7 +7,6 @@ return {
       lazygit = { enabled = true },
       notifier = { enabled = true },
       scope = { enabled = true },
-      git = { enabled = true },
       gitbrowse = { enabled = true },
       zen = { enabled = true },
     },
@@ -17,8 +16,6 @@ return {
       -- Zen
       { "<leader>uz", function() Snacks.zen() end, desc = "Toggle Zen Mode" },
       { "<leader>uZ", function() Snacks.zen.zoom() end, desc = "Toggle Zoom Mode" },
-      -- Git
-      { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame Line" },
       -- Gitbrowse
       { "<leader>gB", function() Snacks.gitbrowse.open() end, desc = "Git Browse (open)" },
     },
