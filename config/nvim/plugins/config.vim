@@ -29,6 +29,7 @@ set laststatus=3
 set completeopt=menu,menuone,noselect
 
 " Numbers
+set scl=no
 set number
 set numberwidth=4
 set ruler

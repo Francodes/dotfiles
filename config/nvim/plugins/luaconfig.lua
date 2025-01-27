@@ -91,8 +91,8 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
-vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true, desc = 'nvim-tree toggle' })
-vim.keymap.set('n', '<leader>nf', ':NvimTreeFindFile<CR>', { silent = true, desc = 'nvim-tree find file' })
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { silent = true, desc = 'nvim-tree toggle' })
+vim.keymap.set('n', '<leader>fe', ':NvimTreeFindFile<CR>', { silent = true, desc = 'nvim-tree find file' })
 -- Disable mini.statusline in NvimTree
 local augroup = vim.api.nvim_create_augroup("UserMiniNvim", {})
 vim.api.nvim_create_autocmd("FileType", {
