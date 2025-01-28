@@ -75,6 +75,8 @@ return {
       { "<leader>uZ", function() Snacks.zen.zoom() end, desc = "Toggle Zoom Mode" },
       -- Gitbrowse
       { "<leader>gB", function() Snacks.gitbrowse.open() end, desc = "Git Browse (open)" },
+      -- Notifier
+      { "<leader>n", function() Snacks.notifier.show_history() end, desc = "Show History" },
     },
   },
 }
