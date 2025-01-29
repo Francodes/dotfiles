@@ -1,7 +1,6 @@
 return {
-  { 
-    "tpope/vim-rails",
-  },
+  { "tpope/vim-rails" },
+  { "AndrewRadev/tagalong.vim" },
   { 
     "tpope/vim-dispatch",
     init = function()
