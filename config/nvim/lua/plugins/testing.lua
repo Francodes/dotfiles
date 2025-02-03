@@ -11,11 +11,11 @@ return {
 		"nvim-neotest/neotest",
 		optional = true,
 		dependencies = {
-			"olimorris/neotest-minitest",
+			"zidhuss/neotest-minitest",
 		},
 		opts = {
 			adapters = {
-				["olimorris/neotest-minitest"] = {},
+				["zidhuss/neotest-minitest"] = {},
 			},
 		},
 	},

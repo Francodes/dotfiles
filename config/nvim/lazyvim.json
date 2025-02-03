@@ -1,6 +1,8 @@
 {
   "extras": [
-    "lazyvim.plugins.extras.ai.copilot"
+    "lazyvim.plugins.extras.ai.copilot",
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.test.core"
   ],
   "news": {
     "NEWS.md": "10960"
