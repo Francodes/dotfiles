@@ -7,6 +7,7 @@ return {
 			opts = {},
 		},
 	},
+	{ "nvim-neotest/neotest-plenary" },
 	{
 		"nvim-neotest/neotest",
 		optional = true,
@@ -15,7 +16,19 @@ return {
 		},
 		opts = {
 			adapters = {
-				["zidhuss/neotest-minitest"] = {},
+				["neotest-plenary"] = {},
+				["neotest-minitest"] = {
+					test_cmd = function()
+						return vim.iter({
+							"bundle",
+							"exec",
+							"rails",
+							"test",
+						})
+							:flatten()
+							:totable()
+					end,
+				},
 			},
 		},
 	},
