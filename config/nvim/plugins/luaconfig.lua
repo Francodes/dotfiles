@@ -55,6 +55,7 @@ vim.keymap.set('n', '<leader>fb', ":Pick buffers tool='git'<CR>", { desc = 'mini
 vim.keymap.set('n', '<leader>fr', ":Pick oldfiles preserve_order=true<CR>", { desc = 'mini.pick oldfiles' })
 vim.keymap.set('n', '<leader>fh', ":Pick hl_groups<CR>", { desc = 'mini.pick highlight groups' })
 vim.keymap.set('n', '<leader>fd', ":Pick diagnostic<CR>", { desc = 'mini.pick diagnostics' })
+vim.keymap.set('n', '<leader>fr', ":Pick resume<CR>", { desc = 'mini.pick resume latest picker' })
 require('mini.extra').setup()
 
 -- Appearance
