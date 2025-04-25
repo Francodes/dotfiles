@@ -134,3 +134,5 @@ require("copilot").setup({
   },
   copilot_node_command = "/Users/franco/.asdf/installs/nodejs/18.19.0/bin/node",
 })
+
+require("hbac").setup()

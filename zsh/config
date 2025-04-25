@@ -84,6 +84,8 @@ alias c='clear'
 alias lg='lazygit'
 alias diffcop="{git ls-files --others --exclude-standard & git diff --diff-filter=d --name-only origin/master ; } | xargs bundle exec rubocop --force-exclusion"
 alias strety="cd ~/Work/strety"
+alias strety-ios="cd ~/Work/strety-ios"
+alias strety-android="cd ~/Work/strety-android"
 alias production="heroku run -a strety-production rails c"
 alias staging="heroku run -a strety-staging rails c"
 
