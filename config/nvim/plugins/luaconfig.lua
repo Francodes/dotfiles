@@ -132,7 +132,6 @@ require("copilot").setup({
        dismiss = "<C-h>",
     },
   },
-  copilot_node_command = "/Users/franco/.asdf/installs/nodejs/23.11.0/bin/node",
 })
 
 require("hbac").setup()
