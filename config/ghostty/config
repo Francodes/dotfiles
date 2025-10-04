@@ -1,6 +1,6 @@
 font-family = "JetBrainsMonoNL Nerd Font"
 adjust-cell-width = -10%
-theme = gruvboxdarkhard
+theme = Gruvbox Dark Hard
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig

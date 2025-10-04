@@ -18,7 +18,7 @@ vim.diagnostic.config({
   float = false,
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   lsp.default_keymaps({ buffer = bufnr })
   local opts = { buffer = bufnr }
 
@@ -39,3 +39,8 @@ lsp.setup_nvim_cmp({
 lsp.nvim_workspace()
 
 lsp.setup()
+
+vim.lsp.enable('ruby_lsp')
+vim.lsp.enable('herb_ls')
+vim.lsp.enable('eslint')
+vim.lsp.enable('stylelint_lsp')
