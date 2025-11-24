@@ -1,6 +1,25 @@
 font-family = "JetBrainsMonoNL Nerd Font"
-adjust-cell-width = -10%
 theme = Gruvbox Dark Hard
+
 font-feature = -calt
 font-feature = -liga
 font-feature = -dlig
+
+adjust-cell-width = -15%
+adjust-cell-height = -15%
+font-thicken = false
+macos-titlebar-style = tabs
+
+keybind = ctrl+b>h=new_split:left
+keybind = ctrl+b>j=new_split:down
+keybind = ctrl+b>k=new_split:up
+keybind = ctrl+b>l=new_split:right
+keybind = ctrl+b>f=toggle_split_zoom
+keybind = ctrl+b>o=goto_split:next
+
+keybind = ctrl+b>x=close_surface
+
+keybind = ctrl+b>n=next_tab
+keybind = ctrl+b>p=previous_tab
+
+window-save-state = always
