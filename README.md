@@ -47,9 +47,8 @@ This:
    runs `brew bundle` against `macos/Brewfile`, then `macos/defaults.sh` for
    `defaults write` system preferences — Finder, Dock, trackpad).
 2. Runs `rake install` to lay down the symlinks described above.
-3. Installs vim-plug and runs `:PlugInstall` for Neovim.
-4. Runs `npm install` for local Node tooling.
-5. Appends `source ~/.zshrc.custom` to `~/.zshrc` if it isn't already sourced there.
+3. Runs `:Lazy! sync` to install Neovim plugins via lazy.nvim (self-bootstrapping from `init.lua`).
+4. Appends `source ~/.zshrc.custom` to `~/.zshrc` if it isn't already sourced there.
 
 ## Deliberately untracked
 

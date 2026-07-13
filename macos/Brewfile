@@ -1,6 +1,5 @@
 brew "npm"
 brew "tmux"
-brew "solargraph"
 brew "nvim"
 brew "lazygit"
 brew "gh"
