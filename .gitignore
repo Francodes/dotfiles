@@ -22,3 +22,7 @@ zsh/plugins
 !package-lock.json
 
 config/*
+!config/ghostty/
+!config/herdr/
+config/herdr/*
+!config/herdr/config.toml

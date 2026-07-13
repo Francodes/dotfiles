@@ -1,0 +1,20 @@
+onboarding = false
+
+[keys]
+zoom = "prefix+f"
+cycle_pane_next = "prefix+o"
+open_notification_target = "prefix+shift+o"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+agent_panel_sort = "spaces"
+[theme]
+name = "gruvbox"
+auto_switch = false
+
+[ui.toast]
+delivery = "terminal"
+
+[ui.sound]
+enabled = false
