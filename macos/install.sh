@@ -8,3 +8,6 @@ cp ./fonts/* ~/Library/Fonts
 
 # Install brew dependencies
 brew bundle
+
+# Apply macOS defaults
+sh ./defaults.sh

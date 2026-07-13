@@ -38,3 +38,6 @@ config/opencode/*.uidotsh.*
 !config/lazygit/
 !config/nvim/
 !/claude/
+!/agents/
+!/gemrc
+!/irbrc

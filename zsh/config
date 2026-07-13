@@ -96,6 +96,6 @@ eval "$(zoxide init --cmd cd zsh)"
 # Exports
 export EDITOR=nvim
 export XDG_CONFIG_HOME="$HOME/.config"
-[ -f ~/.zshrc.secrets ] && source ~/.zshrc.secrets
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 eval "$(mise activate zsh)"

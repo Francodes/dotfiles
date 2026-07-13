@@ -4,9 +4,12 @@ require 'rake'
 require 'erb'
 
 FILES = [
+  'agents',
   'config',
+  'gemrc',
   'gitignore',
   'gitconfig',
+  'irbrc',
   'tmux.conf',
   'zsh',
   'zshrc.custom'
@@ -33,6 +36,9 @@ task :install do
     system %(rm -rf "$HOME/.claude/#{file}")
     system %(ln -s "$PWD/claude/#{file}" "$HOME/.claude/#{file}")
   end
+
+  system %(rm -rf "$HOME/.claude/skills")
+  system %(ln -s "$HOME/.agents/skills" "$HOME/.claude/skills")
 end
 
 def replace_file(file)
