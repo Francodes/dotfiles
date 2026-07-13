@@ -9,6 +9,7 @@ let mapleader = " "
 set t_Co=256
 highlight! link SignColumn LineNr
 set colorcolumn=80
+set winborder=rounded
 
 " Settings
 syntax enable

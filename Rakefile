@@ -12,10 +12,26 @@ FILES = [
   'zshrc.custom'
 ].freeze
 
+# Linked individually into ~/.claude — the directory itself holds untracked
+# runtime state (history, sessions, projects) and must never be replaced whole.
+CLAUDE_FILES = [
+  'CLAUDE.md',
+  'settings.json',
+  'statusline-command.sh',
+  'hooks',
+  'docs'
+].freeze
+
 desc "install the dot files into user's home directory"
 task :install do
   FILES.each do |file|
     replace_file(file)
+  end
+
+  system %(mkdir -p "$HOME/.claude")
+  CLAUDE_FILES.each do |file|
+    system %(rm -rf "$HOME/.claude/#{file}")
+    system %(ln -s "$PWD/claude/#{file}" "$HOME/.claude/#{file}")
   end
 end
 

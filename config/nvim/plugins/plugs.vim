@@ -29,6 +29,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kdheepak/lazygit.nvim'        " Provides lazygit support in vim
 Plug 'zbirenbaum/copilot.lua'
 Plug 'axkirillov/hbac.nvim'         " Automagically close open buffers
+Plug 'stevearc/oil.nvim'            " File explorer in buffer
 
 " HTML helpers
 Plug 'AndrewRadev/tagalong.vim'     " HTML tag rename open/close

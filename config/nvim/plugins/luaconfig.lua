@@ -135,3 +135,5 @@ require("copilot").setup({
 })
 
 require("hbac").setup()
+
+require("oil").setup()

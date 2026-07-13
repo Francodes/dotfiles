@@ -26,3 +26,15 @@ config/*
 !config/herdr/
 config/herdr/*
 !config/herdr/config.toml
+!config/AGENTS.md
+!config/mise/
+!config/codex/
+!config/opencode/
+config/opencode/node_modules
+config/opencode/logs
+config/opencode/package-lock.json
+config/opencode/bun.lock
+config/opencode/*.uidotsh.*
+!config/lazygit/
+!config/nvim/
+!/claude/
