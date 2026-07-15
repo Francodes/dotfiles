@@ -21,6 +21,12 @@ rake install
 # Keeps nvim plugins up todate
 nvim --headless "+Lazy! sync" +qa
 
+# Keeps herdr plugins installed/updated (idempotent; skipped if herdr is absent)
+if command -v herdr >/dev/null 2>&1; then
+  herdr plugin install paulbkim-dev/vim-herdr-navigation --yes
+  herdr plugin install persiyanov/herdr-reviewr --yes
+fi
+
 if ! cat ~/.zshrc | grep $ZSHRC_LOCAL &> /dev/null; then
   echo "source $ZSHRC_LOCAL" >> ~/.zshrc
 fi
