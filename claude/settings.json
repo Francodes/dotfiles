@@ -6,7 +6,6 @@
     ],
     "defaultMode": "auto"
   },
-  "model": "claude-fable-5[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -58,5 +57,6 @@
   "voiceEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754002274321
-  }
+  },
+  "model": "claude-fable-5[1m]"
 }
