@@ -1,9 +1,15 @@
 onboarding = false
 
 [keys]
+navigate_workspace_up = ["up", "k"]
+navigate_workspace_down = ["down", "j"]
+previous_agent = "prefix+k"
+next_agent = "prefix+j"
 zoom = "prefix+z"
 cycle_pane_next = "prefix+o"
 open_notification_target = "prefix+shift+o"
+open_worktree = "prefix+shift+e"
+remove_worktree = "prefix+shift+k"
 
 [[keys.command]]
 key = "ctrl+h"
@@ -29,16 +35,13 @@ type = "plugin_action"
 command = "vim-herdr-navigation.right"
 description = "navigate right (vim/herdr)"
 
-[[keys.command]]
-key = "cmd+r"
-type = "plugin_action"
-command = "persiyanov.reviewr.toggle"
-description = "toggle code-review sidebar"
+[worktrees]
+directory = ".claude/worktrees"
 
 [ui]
 show_agent_labels_on_pane_borders = true
 
-agent_panel_sort = "priority"
+agent_panel_sort = "spaces"
 [theme]
 name = "gruvbox"
 auto_switch = false
