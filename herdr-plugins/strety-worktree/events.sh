@@ -26,7 +26,7 @@ case "$mode" in
     ;;
   removed)
     # The checkout is already deleted; derive the repo root from herdr's worktree
-    # directory convention (<repo>/.claude/worktrees/...) and sweep unclaimed leftovers.
+    # directory convention (<repo>/.claude/worktrees/...) and prune unclaimed leftovers.
     path="$(field '.data.worktree.path')"
     case "$path" in
       */.claude/worktrees/*) repo_root="${path%%/.claude/worktrees/*}" ;;
@@ -34,6 +34,6 @@ case "$mode" in
     esac
     [ -x "$repo_root/bin/worktree" ] || exit 0
     cd "$repo_root"
-    bin/worktree teardown --orphans
+    bin/worktree prune
     ;;
 esac
