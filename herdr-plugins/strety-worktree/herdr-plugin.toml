@@ -1,0 +1,14 @@
+id = "strety-worktree"
+name = "Strety Worktree Lifecycle"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Runs bin/worktree setup in new worktrees and sweeps orphaned dev resources after removal"
+platforms = ["macos", "linux"]
+
+[[events]]
+on = "worktree.created"
+command = ["bash", "events.sh", "created"]
+
+[[events]]
+on = "worktree.removed"
+command = ["bash", "events.sh", "removed"]

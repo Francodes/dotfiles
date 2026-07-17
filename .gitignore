@@ -5,6 +5,7 @@
 zsh/plugins
 
 # Except
+!herdr-plugins/
 !install.sh
 !macos/
 !linux/
