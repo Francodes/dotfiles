@@ -25,6 +25,12 @@ config/*
 !config/herdr/
 config/herdr/*
 !config/herdr/config.toml
+!config/herdr/plugins/
+config/herdr/plugins/*
+!config/herdr/plugins/config/
+config/herdr/plugins/config/*
+!config/herdr/plugins/config/persiyanov.reviewr/
+!config/herdr/plugins/config/persiyanov.reviewr/config.toml
 !config/AGENTS.md
 !config/mise/
 !config/codex/

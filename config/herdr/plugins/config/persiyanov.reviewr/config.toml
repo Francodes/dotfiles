@@ -1,0 +1,3 @@
+theme = "gruvbox"
+auto_open = false
+toggle_placement = "overlay"

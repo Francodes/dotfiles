@@ -35,6 +35,12 @@ type = "plugin_action"
 command = "vim-herdr-navigation.right"
 description = "navigate right (vim/herdr)"
 
+[[keys.command]]
+key = "cmd+r"
+type = "plugin_action"
+command = "persiyanov.reviewr.toggle"
+description = "toggle code reviewer"
+
 [worktrees]
 directory = ".claude/worktrees"
 
